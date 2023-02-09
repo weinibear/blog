@@ -1,10 +1,53 @@
 module.exports = {
   title: '我的',
-  description: '技术总结与分享',
-  base: '/blog/',
+  // description: '技术总结与分享',
+  // base: '/blog/',
   themeConfig: {
     nav: [
       { text: '首页', link: '/' },
+      { text: 'React', link: '/react/' },
+      { text: 'Javascript', link: '/js/' },
+      { text: 'Css', link: '/css/' },
+      {
+        text: '移动端',
+        items: [
+          { text: '小程序', link: '/mini-program/' },
+          { text: 'flutter', link: '/flutter/' },
+        ],
+      },
+
+      { text: '浏览器', link: '/browser/' },
+      { text: '前端工程化', link: '/engineering/' },
+      {
+        text: 'Backend',
+        items: [
+          { text: 'Nodejs', link: '/node/' },
+          { text: 'go', link: '/go/' },
+        ],
+      },
+      {
+        text: '计算机基础',
+        items: [
+          { text: '计算机网络', link: '/network/' },
+          { text: '数据库', link: '/database/' },
+          { text: '设计模式', link: '/design-patterns/' },
+          { text: '数据结构和算法', link: '/algorithms/' },
+        ],
+      },
+      {
+        text: '软件开发',
+        items: [
+          { text: '产品设计', link: '/product/' },
+          { text: '项目管理', link: '/project-management/' },
+        ],
+      },
+      {
+        text: '工具',
+        items: [
+          { text: 'git', link: '/git/' },
+          { text: 'linux', link: '/linux/' },
+        ],
+      },
       {
         text: 'weini 的',
         items: [
@@ -13,22 +56,194 @@ module.exports = {
         ],
       },
     ],
-    sidebar: [
-      {
-        title: '欢迎学习',
-        path: '/',
-        collapsable: false, // 是否折叠
-        children: [{ title: '简介', path: '/' }],
-      },
-      {
-        title: '基础篇',
-        path: '/handbook/1',
-        collapsable: true,
-        children: [
-          { title: '第一篇', path: '/handbook/1' },
-          { title: '第二篇', path: '/handbook/2' },
-        ],
-      },
-    ],
+    sidebar: {
+      '/react/': [
+        {
+          title: 'React',
+          path: '/react/',
+          collapsable: true,
+          children: [
+            { title: '第一章', path: '/react/1' },
+            { title: '第二章', path: '/react/2' },
+          ],
+        },
+      ],
+      '/js/': [
+        {
+          title: 'Javascript',
+          path: '/js/',
+          collapsable: true,
+          children: [
+            { title: '第一章', path: '/js/1' },
+            { title: '第二章', path: '/js/2' },
+          ],
+        },
+      ],
+      '/css/': [
+        {
+          title: 'Css',
+          path: '/css/',
+          collapsable: true,
+          children: [
+            { title: '第一章', path: '/css/1' },
+            { title: '第二章', path: '/css/2' },
+          ],
+        },
+      ],
+      '/mini-program/': [
+        {
+          title: '小程序',
+          path: '/mini-program/',
+          collapsable: true,
+          children: [
+            { title: '第一章', path: '/mini-program/1' },
+            { title: '第二章', path: '/mini-program/2' },
+          ],
+        },
+      ],
+      '/flutter/': [
+        {
+          title: 'Flutter',
+          path: '/flutter/',
+          collapsable: true,
+          children: [
+            { title: '第一章', path: '/flutter/1' },
+            { title: '第二章', path: '/flutter/2' },
+          ],
+        },
+      ],
+      '/browser/': [
+        {
+          title: '浏览器',
+          path: '/browser/',
+          collapsable: true,
+          children: [
+            { title: '第一章', path: '/browser/1' },
+            { title: '第二章', path: '/browser/2' },
+          ],
+        },
+      ],
+      '/engineering/': [
+        {
+          title: '前端工程化',
+          path: '/engineering/',
+          collapsable: true,
+          children: [
+            { title: '第一章', path: '/engineering/1' },
+            { title: '第二章', path: '/engineering/2' },
+          ],
+        },
+      ],
+      '/node/': [
+        {
+          title: 'Nodejs',
+          path: '/node/',
+          collapsable: true,
+          children: [
+            { title: '第一章', path: '/node/1' },
+            { title: '第二章', path: '/node/2' },
+          ],
+        },
+      ],
+      '/go/': [
+        {
+          title: 'Go',
+          path: '/go/',
+          collapsable: true,
+          children: [
+            { title: '第一章', path: '/go/1' },
+            { title: '第二章', path: '/go/2' },
+          ],
+        },
+      ],
+      '/network/': [
+        {
+          title: '计算机网络',
+          path: '/network/',
+          collapsable: true,
+          children: [
+            { title: '第一章', path: '/network/1' },
+            { title: '第二章', path: '/network/2' },
+          ],
+        },
+      ],
+      '/database/': [
+        {
+          title: '数据库',
+          path: '/database/',
+          collapsable: true,
+          children: [
+            { title: '第一章', path: '/database/1' },
+            { title: '第二章', path: '/database/2' },
+          ],
+        },
+      ],
+      '/design-patterns/': [
+        {
+          title: '设计模式',
+          path: '/design-patterns/',
+          collapsable: true,
+          children: [
+            { title: '第一章', path: '/design-patterns/1' },
+            { title: '第二章', path: '/design-patterns/2' },
+          ],
+        },
+      ],
+      '/algorithms/': [
+        {
+          title: '数据结构和算法',
+          path: '/algorithms/',
+          collapsable: true,
+          children: [
+            { title: '第一章', path: '/algorithms/1' },
+            { title: '第二章', path: '/algorithms/2' },
+          ],
+        },
+      ],
+      '/product/': [
+        {
+          title: '产品设计',
+          path: '/product/',
+          collapsable: true,
+          children: [
+            { title: '第一章', path: '/product/1' },
+            { title: '第二章', path: '/product/2' },
+          ],
+        },
+      ],
+      '/project-management/': [
+        {
+          title: '项目管理',
+          path: '/project-management/',
+          collapsable: true,
+          children: [
+            { title: '第一章', path: '/project-management/1' },
+            { title: '第二章', path: '/project-management/2' },
+          ],
+        },
+      ],
+      '/git/': [
+        {
+          title: 'Git',
+          path: '/git/',
+          collapsable: true,
+          children: [
+            { title: '第一章', path: '/git/1' },
+            { title: '第二章', path: '/git/2' },
+          ],
+        },
+      ],
+      '/linux/': [
+        {
+          title: 'Linux使用',
+          path: '/linux/',
+          collapsable: true,
+          children: [
+            { title: '第一章', path: '/linux/1' },
+            { title: '第二章', path: '/linux/2' },
+          ],
+        },
+      ],
+    },
   },
 };

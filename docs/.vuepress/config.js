@@ -3,11 +3,12 @@ module.exports = {
   // description: '技术总结与分享',
   // base: '/blog/',
   themeConfig: {
+    sidebarDepth: 2,
     nav: [
       { text: '首页', link: '/' },
       { text: 'React', link: '/react/' },
       { text: 'Javascript', link: '/js/' },
-      { text: 'Css', link: '/css/' },
+      { text: 'CSS', link: '/css/' },
       {
         text: '移动端',
         items: [
@@ -60,10 +61,11 @@ module.exports = {
       '/react/': [
         {
           title: 'React',
-          path: '/react/',
-          collapsable: true,
+          // path: '/react/',
+          collapsable: false,
           children: [
-            { title: '第一章', path: '/react/1' },
+            { title: '介绍', path: '/react/' },
+            { title: 'React发展历史', path: '/react/history' },
             { title: '第二章', path: '/react/2' },
           ],
         },

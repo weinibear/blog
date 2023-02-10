@@ -129,22 +129,22 @@ module.exports = {
         {
           title: '前端工程化',
           path: '/engineering/',
-          collapsable: true,
+          collapsable: false,
           children: [
-            { title: '第一章', path: '/engineering/1' },
-            { title: '第二章', path: '/engineering/2' },
+            {
+              title: 'package.json',
+              path: '/engineering/package.json',
+            },
+            { title: 'npm包管理', path: '/engineering/npm' },
           ],
         },
       ],
       '/node/': [
         {
           title: 'Nodejs',
-          path: '/node/',
-          collapsable: true,
-          children: [
-            { title: '第一章', path: '/node/1' },
-            { title: '第二章', path: '/node/2' },
-          ],
+          // path: '/node/',
+          collapsable: false,
+          children: [{ title: '第二章', path: '/node/2' }],
         },
       ],
       '/go/': [

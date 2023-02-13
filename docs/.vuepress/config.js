@@ -1,12 +1,12 @@
 module.exports = {
   title: '我的',
-  // description: '技术总结与分享',
-  // base: '/blog/',
+  description: '技术总结与分享',
+  base: '/blog/',
   themeConfig: {
     sidebarDepth: 2,
     nav: [
       { text: '首页', link: '/' },
-      { text: 'React', link: '/react/' },
+      { text: 'React', link: '/react/introduce' },
       { text: 'Javascript', link: '/js/' },
       { text: 'CSS', link: '/css/' },
       {
@@ -50,7 +50,7 @@ module.exports = {
         ],
       },
       {
-        text: 'weini 的',
+        text: '我的',
         items: [
           { text: '掘金', link: 'https://juejin.cn/user/726107228492253' },
           { text: 'Github', link: 'https://github.com/coding-lin' },
@@ -64,9 +64,9 @@ module.exports = {
           // path: '/react/',
           collapsable: false,
           children: [
-            { title: '介绍', path: '/react/' },
+            { title: '介绍', path: '/react/introduce' },
+            { title: 'build-own-react', path: '/react/build-own-react' },
             { title: 'React发展历史', path: '/react/history' },
-            { title: '第二章', path: '/react/2' },
           ],
         },
       ],

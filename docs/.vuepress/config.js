@@ -1,9 +1,12 @@
 module.exports = {
   title: '我的',
   description: '技术总结与分享',
-  base: '/blog/',
+  // base: '/blog/',
   themeConfig: {
     sidebarDepth: 2,
+    logo: '/logo.jpg',
+    // lastUpdated: 'Last Updated',
+    head: [['link', { rel: 'icon', href: '/favicon.ico' }]],
     nav: [
       { text: '首页', link: '/' },
       { text: 'React', link: '/react/introduce' },

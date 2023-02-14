@@ -69,7 +69,8 @@ module.exports = {
           children: [
             { title: '介绍', path: '/react/introduce' },
             { title: 'build-own-react', path: '/react/build-own-react' },
-            { title: 'React发展历史', path: '/react/history' },
+            { title: 'React版本历史', path: '/react/history' },
+            { title: 'Api介绍', path: '/react/api' },
           ],
         },
       ],

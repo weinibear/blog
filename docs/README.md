@@ -17,7 +17,12 @@ footer: MIT Licensed | Copyright © 2018-present Evan You
 ### TODO LIST
 
 ✅ react 历史
-
+📝 react 从零开始构建
+https://blog.usejournal.com/creating-a-react-app-from-scratch-f3c693b84658
+📝 State as a snapshot
+📝 How does React know which state to return?
+📝 Optimizing performance
+https://reactjs.org/docs/optimizing-performance.html
 📝 react17 事件机制
-📝 react18 Suspense
+📝 react18 Suspense 到底是什么
 📝 服务端渲染 SSR, React Server Component RSC

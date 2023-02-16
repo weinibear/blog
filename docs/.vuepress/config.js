@@ -80,7 +80,7 @@ module.exports = {
           path: '/js/',
           collapsable: true,
           children: [
-            { title: '第一章', path: '/js/1' },
+            { title: '基础', path: '/js/base' },
             { title: '第二章', path: '/js/2' },
           ],
         },

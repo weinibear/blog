@@ -308,107 +308,71 @@ function ItemList({ artworks, onToggle }) {
   - 2.将组件状态提升至上一级
   - 3.使用缓存存储状态
 
-## hooks 简易实现
+## 如何正确使用 context
+
+- 1.如果数据都是由`props`向下传入的，代码看起来数据流逻辑其实会相对清除
+- 2.如果你有将数据嵌套很多层，传到深层次组件中，应该手写考虑你的组件拆分是不是有问题，如
 
 ```js
-let componentHooks = [];
-let currentHookIndex = 0;
+<Layout posts={posts} />
 
-// How useState works inside React (simplified).
-function useState(initialState) {
-  let pair = componentHooks[currentHookIndex];
-  if (pair) {
-    // This is not the first render,
-    // so the state pair already exists.
-    // Return it and prepare for next Hook call.
-    currentHookIndex++;
-    return pair;
-  }
-
-  // This is the first time we're rendering,
-  // so create a state pair and store it.
-  pair = [initialState, setState];
-
-  function setState(nextState) {
-    // When the user requests a state change,
-    // put the new value into the pair.
-    pair[0] = nextState;
-    updateDOM();
-  }
-
-  // Store the pair for future renders
-  // and prepare for the next Hook call.
-  componentHooks[currentHookIndex] = pair;
-  currentHookIndex++;
-  return pair;
-}
-
-function Gallery() {
-  // Each useState() call will get the next pair.
-  const [index, setIndex] = useState(0);
-  const [showMore, setShowMore] = useState(false);
-
-  function handleNextClick() {
-    setIndex(index + 1);
-  }
-
-  function handleMoreClick() {
-    setShowMore(!showMore);
-  }
-
-  let sculpture = sculptureList[index];
-  // This example doesn't use React, so
-  // return an output object instead of JSX.
-  return {
-    onNextClick: handleNextClick,
-    onMoreClick: handleMoreClick,
-    header: `${sculpture.name} by ${sculpture.artist}`,
-    counter: `${index + 1} of ${sculptureList.length}`,
-    more: `${showMore ? 'Hide' : 'Show'} details`,
-    description: showMore ? sculpture.description : null,
-    imageSrc: sculpture.url,
-    imageAlt: sculpture.alt,
-  };
-}
-
-function updateDOM() {
-  // Reset the current Hook index
-  // before rendering the component.
-  currentHookIndex = 0;
-  let output = Gallery();
-
-  // Update the DOM to match the output.
-  // This is the part React does for you.
-  nextButton.onclick = output.onNextClick;
-  header.textContent = output.header;
-  moreButton.onclick = output.onMoreClick;
-  moreButton.textContent = output.more;
-  image.src = output.imageSrc;
-  image.alt = output.imageAlt;
-  if (output.description !== null) {
-    description.textContent = output.description;
-    description.style.display = '';
-  } else {
-    description.style.display = 'none';
-  }
-}
-
-let nextButton = document.getElementById('nextButton');
-let header = document.getElementById('header');
-let moreButton = document.getElementById('moreButton');
-let description = document.getElementById('description');
-let image = document.getElementById('image');
-let sculptureList = [
-  {
-    name: 'Homenaje a la Neurocirugía',
-    artist: 'Marta Colvin Andrade',
-    description:
-      'Although Colvin is predominantly known for abstract themes that allude to pre-Hispanic symbols, this gigantic sculpture, an homage to neurosurgery, is one of her most recognizable public art pieces.',
-    url: 'https://i.imgur.com/Mx7dA2Y.jpg',
-    alt: 'A bronze statue of two crossed hands delicately holding a human brain in their fingertips.',
-  },
-];
-
-// Make UI match the initial state.
-updateDOM();
+// 可以尝试先提取组件，把JSX当作children
+ <Layout><Posts posts={posts} /></Layout>
 ```
+
+## context-reducer 示例
+
+## Refs
+
+```js
+import { forwardRef, useRef, useImperativeHandle } from 'react';
+
+const MyInput = forwardRef((props, ref) => {
+  const realInputRef = useRef(null);
+
+  // 使用useImperativeHandle，选择只暴露给父组件的方法
+  useImperativeHandle(ref, () => ({
+    // Only expose focus and nothing else
+    focus() {
+      realInputRef.current.focus();
+    },
+  }));
+  return <input {...props} ref={realInputRef} />;
+});
+
+export default function Form() {
+  const inputRef = useRef(null);
+
+  function handleClick() {
+    inputRef.current.focus();
+  }
+
+  return (
+    <>
+      // 绑定到子组件ref，需要子组件使用forwardRef做转发
+      <MyInput ref={inputRef} />
+      <button onClick={handleClick}>Focus the input</button>
+    </>
+  );
+}
+```
+
+**refs 绑定阶段**
+
+`ref.current`是在`commit`阶段 DOM 更新后被赋值，初始时，DOM 更新前，`ref.current`被设置成 null，DOM 被更新后，`react`会立即将`ref`绑定为对应的 DOM nodes。
+
+## Effect
+
+**怎么判断应该使用 useMemo**
+
+```js
+console.time('filter array');
+const visibleTodos = getFilteredTodos(todos, filter);
+console.timeEnd('filter array');
+```
+
+如果花费时间太长，如超过 1ms，就说明可以使用 useMemo 避免不必要的计算
+
+**如何判断是该使用事件函数还是 effect**
+
+站在用户的视角，如果这个逻辑是由某个特定交互导致，那就写在事件处理函数中；如果是由于屏幕上用户能看到的组件引起，就写在 effect 中

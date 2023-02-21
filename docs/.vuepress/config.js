@@ -57,6 +57,7 @@ module.exports = {
         items: [
           { text: '掘金', link: 'https://juejin.cn/user/726107228492253' },
           { text: 'Github', link: 'https://github.com/coding-lin' },
+          { text: 'TODO', link: '/todo/' },
         ],
       },
     ],
@@ -157,8 +158,9 @@ module.exports = {
           path: '/go/',
           collapsable: true,
           children: [
-            { title: '第一章', path: '/go/1' },
-            { title: '第二章', path: '/go/2' },
+            { title: 'Gorm', path: '/go/gorm' },
+            { title: 'protobuf', path: '/go/protobuf' },
+            { title: 'twirp', path: '/go/twirp' },
           ],
         },
       ],
@@ -247,6 +249,17 @@ module.exports = {
           children: [
             { title: '第一章', path: '/linux/1' },
             { title: '第二章', path: '/linux/2' },
+          ],
+        },
+      ],
+      '/todo/': [
+        {
+          title: 'todo-list',
+          path: '/todo/',
+          collapsable: true,
+          children: [
+            { title: '第一章', path: '/todo/1' },
+            { title: '第二章', path: '/todo/2' },
           ],
         },
       ],

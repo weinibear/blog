@@ -12,6 +12,7 @@ module.exports = {
       { text: 'React', link: '/react/introduce' },
       { text: 'Javascript', link: '/js/' },
       { text: 'CSS', link: '/css/' },
+      { text: 'Typescript', link: '/ts/' },
       {
         text: '移动端',
         items: [

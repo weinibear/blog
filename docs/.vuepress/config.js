@@ -59,9 +59,10 @@ module.exports = {
       {
         text: '我的',
         items: [
-          { text: '掘金', link: 'https://juejin.cn/user/726107228492253' },
-          { text: 'Github', link: 'https://github.com/coding-lin' },
+          // { text: '掘金', link: 'https://juejin.cn/user/726107228492253' },
+          { text: 'Github', link: 'https://github.com/weinibear' },
           { text: 'TODO', link: '/todo/' },
+          { text: '面试', link: '/interview/' },
         ],
       },
     ],
@@ -86,7 +87,7 @@ module.exports = {
           collapsable: true,
           children: [
             { title: '基础', path: '/js/base' },
-            { title: '第二章', path: '/js/2' },
+            { title: 'promise', path: '/js/promise' },
           ],
         },
       ],
@@ -129,8 +130,9 @@ module.exports = {
           path: '/browser/',
           collapsable: true,
           children: [
-            { title: '第一章', path: '/browser/1' },
-            { title: '第二章', path: '/browser/2' },
+            { title: '浏览器渲染', path: '/browser/render' },
+            { title: '浏览器进程与线程', path: '/browser/process' },
+            { title: '事件循环eventloop', path: '/browser/eventloop' },
           ],
         },
       ],
@@ -174,8 +176,8 @@ module.exports = {
           path: '/network/',
           collapsable: true,
           children: [
-            { title: '第一章', path: '/network/1' },
-            { title: '第二章', path: '/network/2' },
+            { title: 'http缓存', path: '/network/http-cache' },
+            { title: 'https', path: '/network/https' },
           ],
         },
       ],
@@ -260,11 +262,14 @@ module.exports = {
         {
           title: 'todo-list',
           path: '/todo/',
+          // collapsable: true,
+        },
+      ],
+      '/interview/': [
+        {
+          title: '面试题',
+          path: '/interview/',
           collapsable: true,
-          children: [
-            { title: '第一章', path: '/todo/1' },
-            { title: '第二章', path: '/todo/2' },
-          ],
         },
       ],
     },

@@ -9,5 +9,8 @@
   },
   "devDependencies": {
     "vuepress": "^1.9.8"
+  },
+  "dependencies": {
+    "markdown-it-task-lists": "^2.1.1"
   }
 }

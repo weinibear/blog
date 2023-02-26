@@ -1,6 +1,9 @@
 module.exports = {
   title: '我的',
   description: '技术总结与分享',
+  markdown: {
+    plugins: ['task-lists'],
+  },
   // base: '/blog/',
   themeConfig: {
     sidebarDepth: 2,

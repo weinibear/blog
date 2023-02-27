@@ -62,7 +62,7 @@ module.exports = {
           // { text: '掘金', link: 'https://juejin.cn/user/726107228492253' },
           { text: 'Github', link: 'https://github.com/weinibear' },
           { text: 'TODO', link: '/todo/' },
-          { text: '面试', link: '/interview/' },
+          { text: '知识点', link: '/interview/' },
         ],
       },
     ],
@@ -167,6 +167,7 @@ module.exports = {
             { title: 'Gorm', path: '/go/gorm' },
             { title: 'protobuf', path: '/go/protobuf' },
             { title: 'twirp', path: '/go/twirp' },
+            { title: 'api gateway', path: '/go/gateway' },
           ],
         },
       ],
@@ -267,7 +268,7 @@ module.exports = {
       ],
       '/interview/': [
         {
-          title: '面试题',
+          title: '知识点',
           path: '/interview/',
           collapsable: true,
         },

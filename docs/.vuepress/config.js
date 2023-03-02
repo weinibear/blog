@@ -263,7 +263,8 @@ module.exports = {
         {
           title: 'todo-list',
           path: '/todo/',
-          // collapsable: true,
+          collapsable: true,
+          children: [{ title: '近期', path: '/todo/recent' }],
         },
       ],
       '/interview/': [

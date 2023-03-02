@@ -4,6 +4,10 @@
 - [ ] [promise](/js/promise)
 - [ ] 低代码相关
 
+### react
+
+- [ ] [swr](https://swr.vercel.app/)
+
 ### 计算机网络
 
 - [x] [http 缓存](/network/http-cache)

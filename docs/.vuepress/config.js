@@ -164,6 +164,8 @@ module.exports = {
           path: '/go/',
           collapsable: true,
           children: [
+            { title: '基础', path: '/go/base' },
+            { title: 'RPC', path: '/go/rpc' },
             { title: 'Gorm', path: '/go/gorm' },
             { title: 'protobuf', path: '/go/protobuf' },
             { title: 'twirp', path: '/go/twirp' },

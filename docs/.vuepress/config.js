@@ -245,7 +245,7 @@ module.exports = {
           path: '/git/',
           collapsable: true,
           children: [
-            { title: '第一章', path: '/git/1' },
+            { title: 'svn', path: '/git/svn' },
             { title: '第二章', path: '/git/2' },
           ],
         },

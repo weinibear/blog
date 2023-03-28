@@ -1,9 +1,7 @@
-# 3-2(周四) -->
+# 3-28(周二)
 
-- [ ] go-gin-example 项目
-  - [ ] go
-  - [ ] gin
-  - [ ] gorm
-  - [ ] mysql
-  - [ ] redis
-  - [ ] log
+**项目构建部署流程**
+
+- [ ] docker
+- [ ] nginx
+- [ ] jenkins

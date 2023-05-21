@@ -63,7 +63,7 @@ module.exports = {
           // { text: '掘金', link: 'https://juejin.cn/user/726107228492253' },
           { text: 'Github', link: 'https://github.com/weinibear' },
           { text: 'TODO', link: '/todo/' },
-          { text: '知识点', link: '/interview/' },
+          { text: '关于我', link: '/interview/' },
         ],
       },
     ],
@@ -281,7 +281,7 @@ module.exports = {
       ],
       '/interview/': [
         {
-          title: '知识点',
+          title: '关于我',
           path: '/interview/',
           collapsable: true,
         },

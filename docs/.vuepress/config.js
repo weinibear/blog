@@ -31,6 +31,7 @@ module.exports = {
         items: [
           { text: 'Nodejs', link: '/node/' },
           { text: 'go', link: '/go/' },
+          { text: 'nginx', link: '/nginx/' },
         ],
       },
       {
@@ -173,6 +174,15 @@ module.exports = {
           ],
         },
       ],
+      '/nginx/': [
+        {
+          title: 'nginx',
+          // path: '/node/',
+          collapsable: false,
+          children: [{ title: '基础', path: '/nginx/base' }],
+        },
+      ],
+
       '/network/': [
         {
           title: '计算机网络',

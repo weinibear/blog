@@ -25,7 +25,10 @@ module.exports = {
       },
 
       { text: '浏览器', link: '/browser/' },
-      { text: '前端工程化', link: '/engineering/' },
+      {
+        text: '前端工程化',
+        items: [{ text: 'webpack', link: '/webpack/' }],
+      },
       {
         text: 'Backend',
         items: [
@@ -151,6 +154,15 @@ module.exports = {
           ],
         },
       ],
+      '/webpack/': [
+        {
+          title: 'webpack',
+          path: '/webpack/',
+          collapsable: true,
+          children: [{ title: '基础', path: '/webpack/base' }],
+        },
+      ],
+
       '/node/': [
         {
           title: 'Nodejs',

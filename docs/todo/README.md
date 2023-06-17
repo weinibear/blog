@@ -9,7 +9,7 @@
   - [ ] `react` `vue`
   - [ ] `js` `ts` `css`
   - [ ] 前端工程化
-    - [ ] 前端构建 `webpack` `vite` `turbopack` `nextjs`
+    - [ ] 前端构建 `webpack` `vite` `turbopack` `nextjs` `单页面应用路由原理`
     - [ ] 前端自动化部署 `CI/CD` `docker` `jenkins` `nginx`
     - [ ] 自动化测试 `Jest`
   - [ ] 移动端

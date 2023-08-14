@@ -1,8 +1,13 @@
-# 6-3 周六
+## 8 月
 
-- [ ] webpack nextjs 项目构建
+- [ ] flutter
 
-# 5-21(周日)
+- [ ] webpack
+
+  - [ ] nextjs 项目构建,服务端渲染到底是什么，怎么使用
+
+- [ ] docker-compose 启动服务，nextjs 项目服务，nginx 服务,两者之间通信方式
+  - [ ] docker 打包 nextjs 项目镜像, .next 文件夹怎么运行部署
 
 ## 项目部署流程
 

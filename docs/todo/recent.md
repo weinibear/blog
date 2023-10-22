@@ -1,24 +1,43 @@
-## 8 月
+## 当前
 
-- [ ] flutter
+- [ ] nextjs 项目占用内存过高问题
+- [ ] nextjs 项目包过大，加载过慢问题
 
+- [ ] nextjs；服务端和客户端渲染
 - [ ] webpack
+- [ ] babel
+- [ ] eslint
 
-  - [ ] nextjs 项目构建,服务端渲染到底是什么，怎么使用
+## 9 月
 
-- [ ] docker-compose 启动服务，nextjs 项目服务，nginx 服务,两者之间通信方式
-  - [ ] docker 打包 nextjs 项目镜像, .next 文件夹怎么运行部署
+- [ ] 数据结构算法
 
-## 项目部署流程
+## 工作
+
+- [ ] react
+- [ ] nextjs
+- [ ] hooks
+- [ ] 设计模式 组件写法设计
+
+## 能力提升 （加 xin 必备）
 
 - [ ] docker
 - [ ] nginx
-- [ ] jenkins
-- [ ] 出文档笔记
+- [ ] go
+- [ ] flutter 小程序
+- [ ] linux
 
-## nextjs 项目运行时内存占用极大
+## 研究
+
+- [ ] 数据结构算法
+- [ ] 计算机组成原理
+- [ ] 操作系统
+- [ ] 计算机网络
+- [ ] 英语
+
+<!-- ## nextjs 项目运行时内存占用极大
 
 - [ ] 谷歌性能分析 performance memory
 - [ ] 解决项目运行卡顿问题
 - [ ] 项目构建相关熟练掌握(webpack babel eslint nextjs vite npm nodemodules)
-- [ ] 相关优化出文档笔记
+- [ ] 相关优化出文档笔记 -->

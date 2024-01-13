@@ -4,7 +4,7 @@ module.exports = {
   markdown: {
     plugins: ['task-lists'],
   },
-  // base: '/blog/',
+  base: '/blog/',
   themeConfig: {
     sidebarDepth: 2,
     logo: '/logo.jpg',

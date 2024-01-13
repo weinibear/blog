@@ -66,7 +66,7 @@ module.exports = {
           // { text: '掘金', link: 'https://juejin.cn/user/726107228492253' },
           { text: 'Github', link: 'https://github.com/weinibear' },
           { text: 'TODO', link: '/todo/' },
-          { text: '关于我', link: '/interview/' },
+          { text: '知识点导航', link: '/interview/' },
         ],
       },
     ],
@@ -288,12 +288,11 @@ module.exports = {
           title: 'todo-list',
           path: '/todo/',
           collapsable: true,
-          children: [{ title: '近期', path: '/todo/recent' }],
         },
       ],
       '/interview/': [
         {
-          title: '关于我',
+          title: '知识点导航',
           path: '/interview/',
           collapsable: true,
         },

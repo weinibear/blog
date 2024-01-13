@@ -11,24 +11,3 @@ tagline: 技术学习与总结
 #     details: VuePress 为每个页面预渲染生成静态的 HTML，同时在页面被加载的时候，将作为 SPA 运行。
 footer: MIT Licensed | Copyright © 2022-present weini
 ---
-
-## js
-
-- [x] [深拷贝和浅拷贝](/js/base.html#深拷贝和浅拷贝)
-- [ ] [promise](/js/promise)
-- [ ] 低代码相关
-
-## react
-
-- [ ] [swr](https://swr.vercel.app/)
-
-### 计算机网络
-
-- [x] [http 缓存](/network/http-cache)
-- [x] [http 和 https](/network/https)
-
-### 浏览器
-
-- [x] [浏览器渲染](/browser/render)
-- [x] [浏览器进程与线程](/browser/process)
-- [x] [事件循环 eventloop](/browser/eventloop)
